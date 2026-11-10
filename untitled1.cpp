@@ -1,22 +1,19 @@
-/*
-定义int变量a=10，定义指针p保存a的地址。
-利用指针p修改a的值为20，然后分别打印a、*p的值。
-输出样例：
-a = 20
-*p = 20
-*/
-#include<stdio.h>
+#include<iostream>
+#include<algorithm>
+using namespace std;
+int a, b, n;
+long long finish_people, all_work;
 int main() {
-	int a,*p;
-	a = 10;
-	p = &a;
-	*p = 20;
-	printf("%d", a);
-	printf("%d", *p);
+	ios::sync_with_stdio(0);
+	cin.tie(0), cout.tie(0);
+	cin >> n;
+	while (n--) {
+		cin >> a >> b;
+		if (a >= b) {
+			finish_people++;
+			all_work += a;
+		} else all_work += a;
+	}
+	cout << finish_people << " " << all_work;
 	return 0;
-
-
-
-
-
 }
